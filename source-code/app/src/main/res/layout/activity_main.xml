@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sarker.firebaselab.MainActivity"
+    android:background="@android:color/darker_gray">
+
+    <TextView
+        android:id="@+id/chatwith_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#565656"
+        android:textColor="@android:color/white"/>
+    ​
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".9"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:transcriptMode="alwaysScroll" />
+    ​
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_border">
+        ​
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:textColor="@android:color/white"
+            android:layout_weight=".15"/>
+        ​
+        <ImageButton
+            android:src="@android:drawable/ic_menu_send"
+            android:id="@+id/send_button"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".85"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="5dp"/>
+        ​
+    </LinearLayout>
+
+</LinearLayout>

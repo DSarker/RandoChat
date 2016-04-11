@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_weight=".1"
+            android:id="@+id/message_imageview1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/question"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="4dp" />
+
+        <TextView
+            android:id="@+id/left_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="➤"
+            android:rotation="180"
+            android:layout_marginRight="-13dp"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <TextView
+            android:layout_weight=".8"
+            android:id="@+id/message_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/message_imageview1"
+            android:padding="15dp"
+            android:text="Hello"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_dark"/>
+
+        <TextView
+            android:id="@+id/right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="➤"
+            android:layout_marginLeft="-13dp"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_weight=".1"
+            android:id="@+id/message_imageview2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/message_textview"
+            android:src="@drawable/shadow_face"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="4dp" />
+
+    </LinearLayout>
+</RelativeLayout>
