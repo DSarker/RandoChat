@@ -77,7 +77,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 @Override
                 public void onChildRemoved(DataSnapshot dataSnapshot) {
-                    chatroomList.remove(dataSnapshot.getValue(Chatroom.class));
+                    for (Chatroom chatroom : chatroomList) {
+                        if (chatroom.getKey().equals(dataSnapshot.getKey())) {
+                            chatroomList.remove(chatroom);
+                            break;
+                        }
+                    }
                 }
 
                 @Override
